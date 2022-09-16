@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #124;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.verstundesktop.gui.FirstProprieteController">
+   <children>
+      <Label layoutX="20.0" layoutY="50.0" text="idP" textFill="#eeb700">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="20.0" layoutY="104.0" text="nomP" textFill="#eeb700">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="15.0" layoutY="156.0" text="gouvernoratP" textFill="#eeb700">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <Button fx:id="btnAjouter" alignment="CENTER_RIGHT" layoutX="88.0" layoutY="308.0" mnemonicParsing="false" onAction="#ajouterPropriete" prefHeight="40.0" prefWidth="83.0" text="Ajouter" textAlignment="CENTER" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TextField fx:id="tfidP" layoutX="96.0" layoutY="48.0" prefHeight="25.0" prefWidth="123.0" />
+      <TextField fx:id="tfnomP" layoutX="96.0" layoutY="98.0" prefHeight="25.0" prefWidth="123.0" />
+      <TextField fx:id="tfgouvernoratP" layoutX="96.0" layoutY="151.0" prefHeight="25.0" prefWidth="123.0" />
+      <Button fx:id="btnModifier" alignment="CENTER_RIGHT" layoutX="183.0" layoutY="308.0" mnemonicParsing="false" onAction="#modifierPropriete" prefHeight="40.0" prefWidth="83.0" text="Modifier" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnSupprimer" alignment="CENTER_RIGHT" layoutX="277.0" layoutY="307.0" mnemonicParsing="false" onAction="#supprimerPropriete" prefHeight="40.0" prefWidth="95.0" text="Supprimer" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TableView fx:id="table" layoutX="234.0" layoutY="17.0" onMouseClicked="#getSelect" prefHeight="278.0" prefWidth="360.0" style="-fx-alignment: center;">
+        <columns>
+          <TableColumn fx:id="TidP" prefWidth="53.0" text="idP" />
+          <TableColumn fx:id="TnomP" prefWidth="53.0" text="nomP" />
+            <TableColumn fx:id="TgouvernoratP" prefWidth="94.0" text="gouvernoratP" />
+            <TableColumn fx:id="Tdate" prefWidth="81.0" text="dateajout" />
+            <TableColumn fx:id="TnbreChambre" prefWidth="78.0" text="nbre de chambre" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="93.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../vertundesktop/images/ajouter.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="184.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../vertundesktop/images/update.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="277.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../vertundesktop/images/delete.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="19.0" layoutY="250.0" text="dateajout" textFill="#eeb700">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="tfdate" layoutX="95.0" layoutY="249.0" prefHeight="25.0" prefWidth="123.0" />
+      <Label layoutX="12.0" layoutY="210.0" text="nbre de chambre" textFill="#eeb700">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfnbreChambre" layoutX="94.0" layoutY="205.0" prefHeight="25.0" prefWidth="123.0" />
+   </children>
+</AnchorPane>

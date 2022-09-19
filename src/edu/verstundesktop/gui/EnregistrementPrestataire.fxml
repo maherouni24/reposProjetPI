@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" opacity="0.89" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #124;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.verstundesktop.gui.EnregistrementPrestataireController">
+   <children>
+      <Label layoutX="57.0" layoutY="14.0" text="Enregistrement de Prestataire" textFill="#eeb700">
+         <font>
+            <Font name="Arial Black" size="25.0" />
+         </font>
+      </Label>
+      <Pane layoutX="7.0" layoutY="67.0" prefHeight="253.0" prefWidth="259.0" style="-fx-background-color: black;">
+         <children>
+            <Label layoutX="13.0" layoutY="18.0" text="ID" textFill="#eeb700" />
+            <Label layoutX="6.0" layoutY="60.0" text="Nom" textFill="#eeb700" />
+            <Label layoutX="4.0" layoutY="110.0" text="Prenom" textFill="#eeb700" />
+            <Label layoutX="8.0" layoutY="163.0" text="Mail" textFill="#eeb700" />
+            <TextField fx:id="tfId" layoutX="81.0" layoutY="14.0" prefHeight="25.0" prefWidth="159.0" />
+            <TextField fx:id="tfNom" layoutX="81.0" layoutY="56.0" prefHeight="25.0" prefWidth="159.0" />
+            <TextField fx:id="tfPrenom" layoutX="81.0" layoutY="106.0" prefHeight="25.0" prefWidth="159.0" />
+            <TextField fx:id="tfMail" layoutX="81.0" layoutY="159.0" prefHeight="25.0" prefWidth="159.0" />
+            <Label layoutX="10.0" layoutY="216.0" text="mot de passe" textFill="#eeb700" />
+            <TextField fx:id="tfPsw" layoutX="87.0" layoutY="212.0" prefHeight="25.0" prefWidth="153.0" />
+         </children>
+      </Pane>
+      <TableView fx:id="prestataireTable" layoutX="273.0" layoutY="67.0" onMouseClicked="#handleMouseAction" prefHeight="253.0" prefWidth="321.0">
+        <columns>
+          <TableColumn fx:id="idColumn" editable="false" prefWidth="34.0" sortType="DESCENDING" text="ID" />
+          <TableColumn fx:id="nomColumn" editable="false" prefWidth="66.0" text="Nom" />
+            <TableColumn fx:id="prenomColumn" editable="false" prefWidth="67.0" text="Prenom" />
+            <TableColumn fx:id="mailColumn" editable="false" prefWidth="93.0" text="Mail" />
+            <TableColumn fx:id="pswColumn" prefWidth="75.0" text="psw" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAjouter" layoutX="22.0" layoutY="348.0" mnemonicParsing="false" onAction="#AddPrestataire" prefHeight="39.0" prefWidth="105.0" text="ajouter" textFill="#eeb700">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnModifier" layoutX="138.0" layoutY="348.0" mnemonicParsing="false" onAction="#UpdatePrestataire" prefHeight="39.0" prefWidth="105.0" text="modifier" textFill="#eeb700">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSupprimer" layoutX="253.0" layoutY="348.0" mnemonicParsing="false" onAction="#DeletePrestataire" text="supprimer" textFill="#eeb700">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #112;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.verstundesktop.gui.SaBullaRegiaController">
+   <children>
+      <Button fx:id="btnSuivant" layoutX="451.0" layoutY="197.0" mnemonicParsing="false" onAction="#SendToNext" text="suivant">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnVisite" layoutX="456.0" layoutY="243.0" mnemonicParsing="false" onAction="#SendToVisite" text="Visite">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRetour" layoutX="458.0" layoutY="290.0" mnemonicParsing="false" onAction="#SendToAccueil" text="Accueil">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="premImage" fitHeight="274.0" fitWidth="419.0" layoutX="33.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Le%20site%20archéologique%20de%20Bulla%20Regia.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="#eeb700" layoutX="33.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Site Archéologique de Bulla Regia :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="btn1" layoutX="33.0" layoutY="349.0" mnemonicParsing="false" onAction="#FirstImage" text="1" />
+      <Button fx:id="btn2" layoutX="56.0" layoutY="349.0" mnemonicParsing="false" onAction="#SecondImage" text="2" />
+      <ImageView fx:id="secondImage" fitHeight="274.0" fitWidth="402.0" layoutX="33.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Bulla-Regia1.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn3" layoutX="79.0" layoutY="349.0" mnemonicParsing="false" onAction="#ThirdImage" text="3" />
+      <ImageView fx:id="thirdImage" fitHeight="274.0" fitWidth="411.0" layoutX="33.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/bulla-regia-tunisia.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
